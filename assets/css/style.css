@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/*NAV*/
+.navbar {
+    background-color: #ff8c91 ; 
+}
+
+
+.form-control:focus {
+    border: 2px solid #6d165a;
+}
+
+
+.btn-outline-success {
+    border-color:#6d165a;
+    color:#6d165a
+}
+
+.btn-outline-success:hover {
+    background-color: #6d165a ;
+    color: #ffc4a6;
+}
+
+.btn-outline-success:active {
+    background-color: #6d165a !important;
+    color: #ffc4a6 !important;
+}
+    
+/*---*/
+
+/*MAIN*/
+main {
+    background-color: #ffc4a6;
+}
+
+h1 {
+    font-size: 3.5em;
+    text-align: center;
+    margin: 40px 0px;
+    color: #6d165a
+}
+
+.card_containter {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.card {
+    width: 20%;
+    margin: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    border: .3rem solid #6d165a;
+    margin: 2%;
+    margin-bottom: 5%;
+    padding: 1%;
+    border-radius: 5%;
+    background-color: #bce3c5;
+}
+
+.card__texto {
+    color:#230f2b;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.tienda {
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr 13fr;
+}
+
+aside {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+h1 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+
+.libros {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card:hover {
+    animation-name: zoomin;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomin {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+/*----*/
+
+/*FOOTER*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #ff8c91;
+    width: 100%;
+}
+
+.footer_container {
+    text-align: center;
+    padding: 15px 0;
+    margin: 10px 0;
+    color:#6d165a;
+}
+
+.footer_redes {
+    order: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.footer_redes i{
+    font-size: 1.5em;
+    padding: 15px 30px;
+}
+
+@media screen and (max-width: 421px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .card_containter {
+        justify-content: center;
+    }
+
+    .card {
+        width: 40%;
+        margin: 15px;
+    }
+
+    .tienda {
+        display: flex;
+        flex-direction: column;
+    }
+
+    aside img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .card{
+        width: 45%;
+        margin: 5px 5px;
+    }
+}
